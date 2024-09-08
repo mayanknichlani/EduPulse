@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding-top: 50px; /* Added space for navbar */
+        }
+
+        .navbar {
+            background-color: #3498db;
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #297fb8;
+        }
+
+        .profile-dropdown {
+            float: right;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .profile-dropdown:hover .profile-content {
+            display: block;
+        }
+
+        .profile-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            width: 200px;
+            box-shadow: 0px 0.5rem 1rem 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 45px;
+            right: 0;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .welcome-message {
+            margin-top: 50px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .start-class-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition-duration: 0.4s;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .start-class-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <div class="profile-dropdown">
+            <img id="profileImg" src="smit ghatole.jpeg" alt="Teacher Profile Photo">
+            <span id="teacherName">Smit Ghatole</span> ▼
+            <div class="profile-content">
+                <img id="profileContentImg" src="smit ghatole.jpeg" alt="Teacher Profile Photo">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> tharkisaala@gmail.com</p>
+                <p><strong>Number of Courses enrolled in:</strong> 0</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="welcome-message">
+        <p>Welcome to Edupulse! It seems you are not enrolled in any Courses</p>
+        <button class="start-class-button">Join a New Course</button>
+    </div>
+
+    <script>
+        // JavaScript code remains the same
+        function toggleProfile() {
+            var profileContent = document.getElementById("profileContent");
+            if (profileContent.style.display === "block") {
+                profileContent.style.display = "none";
+            } else {
+                profileContent.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
